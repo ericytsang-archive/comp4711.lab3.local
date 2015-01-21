@@ -38,7 +38,16 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+/* custom routing rules */
+$route['sleep'] = 'first/zzz';
+$route['lock/(.*)'] = 'welcome/shucks';
+$route['show/(:num)'] = 'first/gimmie/3';
+$route['dunno'] = 'guess';
+$route['([a-zA-Z]{4})/bingo'] = 'bingo';
+$route['(comp\d{4})/(.*)'] = 'bingo/wisdom';
+
+/* fall-back / default routing rules */
+$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 
 

@@ -3,7 +3,7 @@
 /**
  * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
  * Our quotes model has been autoloaded, because we use it everywhere.
- * 
+ *
  * controllers/Welcome.php
  *
  * ------------------------------------------------------------------------
@@ -24,11 +24,20 @@ class Welcome extends Application {
         $source = $this->quotes->all();
         $authors = array();
         foreach ($source as $record) {
-            $authors[] = array('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
+            $authors[] = array(
+                'who' => $record['who'],
+                'mug' => $record['mug'],
+                'href' => $record['where']);
         }
         $this->data['authors'] = $authors;
 
         $this->render();
+    }
+
+    function shucks()
+    {
+        $record = $this->quotes->get('2');
+        $this->load_justone($record);
     }
 
 }
