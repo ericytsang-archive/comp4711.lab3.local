@@ -10,7 +10,12 @@
 |
 */
 
-
+$hook['display_override'] = array(
+        'class'    => 'Masseur',
+        'function' => 'massage_output',
+        'filename' => 'Masseur.php',
+        'filepath' => 'hooks'
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
