@@ -8,18 +8,30 @@ class First extends Application
         parent::__construct();
     }
 
+    /**
+     * loads the first quote record from the Quotes.php, and then renders and
+     *   displays it using the justone view.
+     */
     function index()
     {
         $record = $this->quotes->first();
         $this->load_justone($record);
     }
 
+    /**
+     * loads the first quote record from the Quotes.php, and then renders and
+     *   displays it using the justone view.
+     */
     function zzz()
     {
         $record = $this->quotes->get('1');
         $this->load_justone($record);
     }
 
+    /**
+     * loads the specified quote record from the Quotes.php, and then renders
+     *   and displays it using the justone view.
+     */
     function gimmie($which)
     {
         $record = $this->quotes->get($which);

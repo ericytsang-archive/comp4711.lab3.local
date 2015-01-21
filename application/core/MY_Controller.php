@@ -30,16 +30,13 @@ class Application extends CI_Controller {
     /**
      * helper function used by controllers to load the justone page.
      *
-     * @param      {String} $which String of a number used to identify which
-     *   quote defined in the Quotes.php to display on the justone page.
+     * @param      {Array} $record the record of the quote quote defined in the
+     *   Quotes.php to display on the justone page.
      */
     function load_justone($record)
     {
         /* populate associative array from model */
-        // $this->data = array_merge($this->data, $record);
-        $this->data['who'] = $record['who'];
-        $this->data['mug'] = $record['mug'];
-        $this->data['what'] = $record['what'];
+        $this->data = array_merge($this->data, $record);
 
         /* render the page */
         $this->data['pagebody'] = 'justone';

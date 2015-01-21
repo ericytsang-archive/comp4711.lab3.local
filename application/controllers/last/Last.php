@@ -8,6 +8,10 @@ class Last extends Application
         parent::__construct();
     }
 
+    /**
+     * loads the last quote record from the Quotes.php, and then renders and
+     *   displays it using the justone view.
+     */
     function index()
     {
         $record = $this->quotes->last();

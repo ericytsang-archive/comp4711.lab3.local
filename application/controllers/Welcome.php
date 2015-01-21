@@ -8,9 +8,11 @@
  *
  * ------------------------------------------------------------------------
  */
-class Welcome extends Application {
+class Welcome extends Application
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
     }
 
@@ -18,8 +20,15 @@ class Welcome extends Application {
     //  The normal pages
     //-------------------------------------------------------------
 
-    function index() {
-        $this->data['pagebody'] = 'homepage';    // this is the view we want shown
+    /**
+     * loads the homepage, and shows a image of the person who said each quote.
+     * clicking on the image will link to a page with their quote on it.
+     */
+    function index()
+    {
+        // this is the view we want shown
+        $this->data['pagebody'] = 'homepage';
+
         // build the list of authors, to pass on to our view
         $source = $this->quotes->all();
         $authors = array();
@@ -34,6 +43,10 @@ class Welcome extends Application {
         $this->render();
     }
 
+    /**
+     * loads the second quote record from the Quotes.php, and then renders and
+     *   displays it using the justone view.
+     */
     function shucks()
     {
         $record = $this->quotes->get('2');
