@@ -14,7 +14,7 @@ class Masseur
         // get this page's DOM document
         $doc = $this->_get_document();
 
-        // make capitalized letters bold.
+        // make title-cased words in paragraph tags of the "lead" class bold
         $paragraphs = $doc->getElementsByTagName('p');
         foreach($paragraphs as $p)
         {
