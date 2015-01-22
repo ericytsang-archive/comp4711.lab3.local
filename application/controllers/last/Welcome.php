@@ -19,5 +19,5 @@ class Welcome extends Application
     }
 }
 
-/* End of file Last.php */
-/* Location: application/controllers/last/Last.php */
+/* End of file Welcome.php */
+/* Location: application/controllers/last/Welcome.php */
