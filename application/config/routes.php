@@ -39,8 +39,9 @@
 */
 
 /* custom routing rules */
+$route['last'] = 'last/';
 $route['sleep'] = 'first/zzz';
-$route['lock/(.*)'] = 'welcome/shucks';
+$route['lock/(:any)/(:any)'] = 'welcome/shucks';
 $route['show/(:num)'] = 'first/gimmie/3';
 $route['dunno'] = 'guess';
 $route['([a-zA-Z]{4})/bingo'] = 'bingo';
